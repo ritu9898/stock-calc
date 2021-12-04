@@ -1,7 +1,6 @@
 <!DOCTYPE html>
   <head>
     <title>Stock Profit or Los</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
       .container {
         max-width: 500px;
@@ -24,32 +23,60 @@
       .row {
         margin-bottom: 20px;
       }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+          display: inline-block;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #212529;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: middle;
+          cursor: pointer;
+          background-color: transparent;
+          border: 1px solid transparent;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          border-radius: .25rem;
+      }
+      .btn-success {
+          color: #fff;
+          background-color: #198754;
+          border-color: #198754;
+      }
+
     </style>
     <script src="./index.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h2>Stock Profit or Loss Calc</h2>
-      <div class="grid">
-        <div class="row">
-          <div class="col-md-12">
-             <h3>Initial Price</h3>
-             <input type="number" min="1" id="initial_price" /> 
+    <div class="center">
+      <div class="container">
+        <h2>Stock Profit or Loss Calc</h2>
+        <div class="grid">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Initial Price</h3>
+              <input type="number" min="1" id="initial_price" /> 
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <h3>Quantity of Stocks</h3>
-            <input type="number" min="1" id="quantity" /> 
-         </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-             <h3>Current Price</h3>
-             <input type="number" min="1" id="current_price" /> 
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Quantity of Stocks</h3>
+              <input type="number" min="1" id="quantity" /> 
           </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Current Price</h3>
+              <input type="number" min="1" id="current_price" /> 
+            </div>
+          </div>
+          <button id="calculate" class="btn btn-success" onclick="calculate()">Calculate</button>
         </div>
-        <button id="calculate" class="btn btn-success" onclick="calculate()">Calculate</button>
       </div>
     </div>
     <h2 id="ans"></h2>
